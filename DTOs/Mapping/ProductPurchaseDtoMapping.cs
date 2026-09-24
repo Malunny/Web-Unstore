@@ -8,14 +8,16 @@ public static partial class DtoMapping
         => new ProductPurchase
         {
             ProductId = dto.ProductId,
-            Quantity = dto.Quantity
+            Quantity = dto.Quantity,
+            PriceOnPurchase = dto.PriceOnPurchase
         };
 
     public static ProductPurchaseReadDto MapToDto(this ProductPurchase model)
         => new ProductPurchaseReadDto
         {
             ProductId = model.ProductId,
-            Quantity = model.Quantity
+            Quantity = model.Quantity,
+            PriceOnPurchase = model.PriceOnPurchase
         };
 
     public static ICollection<ProductPurchaseReadDto> MapToDto(this ICollection<ProductPurchase> items)

@@ -9,6 +9,7 @@ public record ProductPurchaseReadDto
     
     [Required]
     public int Quantity { get; set; }
+    public decimal PriceOnPurchase { get; set; }
 }
 
 public record ProductPurchaseCreateDto
@@ -19,4 +20,5 @@ public record ProductPurchaseCreateDto
     [Required(ErrorMessage = "Quantity is required")]
     [Range(1, int.MaxValue, ErrorMessage = "Quantity must be at least 1")]
     public int Quantity { get; set; }
+    public decimal PriceOnPurchase { get; set; }
 }

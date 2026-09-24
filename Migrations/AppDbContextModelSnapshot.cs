@@ -259,6 +259,9 @@ namespace Unstore.Migrations
                     b.Property<int>("PurchaseId")
                         .HasColumnType("integer");
 
+                    b.Property<decimal>("PriceOnPurchase")
+                        .HasColumnType("numeric");
+
                     b.Property<int>("Quantity")
                         .HasColumnType("integer");
 
